@@ -1,0 +1,48 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://static.vecteezy.com/system/resources/previews/005/430/944/non_2x/cartoon-style-universe-space-design-illustration-vector.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        header {
+            background-color: #1f2833;
+            padding: 20px;
+            font-size: 24px;
+        }
+        section {
+            padding: 20px;
+        }
+        .card {
+            background-color: #45a29e;
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+        .info {
+            display: none;
+            background-color: #1f2833;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        .card:hover + .info {
+            display: block;
+        }
+        .planeta {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: #f4a261;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: flotar 6s infinite alternate;
+        }
+        @keyframes flotar {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(20px); }
+        }
