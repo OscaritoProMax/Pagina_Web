@@ -2,46 +2,52 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Atronomia y Universo</title>
-    <link rel="stylesheet" href="recursos/styles_pagina2.css">
-    <link rel="icon" type="image/png" href="https://static.nationalgeographicla.com/files/styles/image_3200/public/gsfc_20220520_m14162_saturnmoons-orig.png.webp?w=546&h=308
-    ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomía y Universo</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/869/869869.png">
+    <link rel="stylesheet" href="recursos/styles_pagina2.css   ">
 </head>
 
 <body>
-    <header>
-        <h1>Explorando el Universo</h1>
+
+    <header class="header-espacial">
+        <h1 class="principal">Astronomía y Universo</h1>
+        <nav class="nav-espacial">
+            <a href="#que-es" class="boton-espacial">¿Qué es la Astronomía?</a>
+            <a href="#elementos" class="boton-espacial">Elementos del cosmos</a>
+            <a href="#imagenes" class="boton-espacial">Galería</a>
+        </nav>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#que-es">¿Qué es la Astronomía?</a></li>
-            <li><a href="#elementos">Elementos del cosmos</a></li>
-            <li><a href="#imagenes">Galería</a></li>
-        </ul>
-    </nav>
-    <section id="que-es">
-        <h2>¿Qué es la Astronomía?</h2>
-        <p>La astronomía es la ciencia que estudia los cuerpos celestes como planetas, estrellas y galaxias.</p>
+
+    <section id="que-es" class="contenedor-webb">
+        <div class="info-webb">
+            <h2 class="titulo-webb">¿Qué es la Astronomía?</h2>
+            <p>La astronomía es la ciencia que estudia los cuerpos celestes como planetas, estrellas, galaxias y el universo en su conjunto. Su objetivo es comprender el origen, evolución y comportamiento del cosmos mediante la observación y el análisis científico.</p>
+        </div>
+        <div class="imagen-webb">
+            <img src="https://mf.b37mrtl.ru/actualidad/public_images/3a0/3a03f4b3b5721128fc7bf13ad630a606_article.jpg" alt="Nebulosa de Orión">
+        </div>
     </section>
     
     <section id="elementos">
         <h2>Elementos del cosmos</h2>
         <p>El universo está compuesto por estrellas, planetas, asteroides, galaxias y nebulosas.</p>
     </section>
-    
-    <section id="imagenes">
-        <h2>Galería</h2>
-        <div class="gallery">
-            <img src="https://img.freepik.com/vector-gratis/ilustracion-luna-llena-gris-sobre-fondo-blanco_53876-117406.jpg" alt="Luna">
-            <img src="https://services.meteored.com/img/article/ma-le-stelle-hanno-veramente-le-punte-scopriamo-questo-interessante-fenomeno-1729245304140_512.png" alt="Estrellas">
-            <img src="https://concepto.de/wp-content/uploads/2019/07/galaxia-e1561948092846.jpg" alt="Galaxia">
+
+    <section id="imagenes" class="contenedor-webb">
+        <div class="info-webb">
+            <h2 class="titulo-webb">Galería del Espacio</h2>
+            <p>Observa algunas de las imágenes más impactantes del cosmos, capturadas por telescopios como el Hubble y el James Webb.</p>
+        </div>
+        <div class="imagen-webb">
+            <img src="https://concepto.de/wp-content/uploads/2019/07/galaxia-e1561948087438-800x400.jpg" alt="Galaxia en el Universo">
         </div>
     </section>
-    <footer>
-        <p>&copy; 2025 Explorando el Universo</p>
-    </footer>
+
+    <div class="tierra-container">
+        <img class="icono-tierra" src="https://www.muyinteresante.com/wp-content/uploads/sites/5/2023/04/24/64462057787fd.jpeg" alt="Planeta Tierra">
+        <div class="bio-tierra">La Tierra es el tercer planeta del Sistema Solar y el único conocido con vida.</div>
+    </div>
 
 </body>
 </html>
-
