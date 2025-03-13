@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  header {
+    text-align: center;
+    padding: 3rem 2rem 1rem;
+    color: #00bfff;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .event {
+    background-color: #1a1a1a;
+    border-left: 5px solid #00bfff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.2);
+    transition: transform 0.3s;
+  }
+
+  .event:hover {
+    transform: scale(1.02);
+  }
+
+  .event span {
+    font-size: 1.1rem;
+    color: #00bfff;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2rem;
+    color: #ccc;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+  }
+
+  /* Planeta flotante */
+  .floating-planet {
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    width: 100px;
+    animation: floatY 10s infinite ease-in-out;
+    z-index: 999;
+  }
+
+  .floating-planet:hover::after {
+    content: '¡Qué emocionante es la historia!';
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 191, 255, 0.9);
+    color: #000;
+    padding: 8px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+  }
+
+  @keyframes floatY {
+    0% { top: 10%; }
+    50% { top: 60%; }
+    100% { top: 10%; }
+  }
+
+  @media (max-width: 600px) {
+    .floating-planet {
+      width: 70px;
+    }
+  }
