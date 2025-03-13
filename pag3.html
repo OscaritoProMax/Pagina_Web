@@ -3,39 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viajes Espaciales y Colonización</title>
+    <title>Exploración del Universo</title>
     <link rel="stylesheet" href="recursos/stylespag3.css">
 </head>
 <body>
-    <header class="principal">
-        🌌 Viajes Espaciales y Colonización 🛰️
+
+    <header>
+        <h1>Exploración del Universo</h1>
     </header>
-    
-    <section>
-        <div class="card">
-            <h2>Misiones Tripuladas y Robóticas</h2>
-            <p>Exploramos el espacio con misiones como la ISS, SpaceX, Artemis y Marte.</p>
-        </div>
-        <div class="info">
-            <p>La Estación Espacial Internacional (ISS) es un laboratorio en órbita, SpaceX está revolucionando los viajes comerciales, el programa Artemis de la NASA planea volver a la Luna y las misiones a Marte están cada vez más cerca.</p>
-        </div>
-        
-        <div class="card">
-            <h2>Colonización de Marte y Más Allá</h2>
-            <p>Los planes para habitar Marte y otros planetas están avanzando rápidamente.</p>
-        </div>
-        <div class="info">
-            <p>Empresas como SpaceX sueñan con establecer bases en Marte. Tecnologías avanzadas y estudios sobre terraformación nos acercan a vivir en otros planetas.</p>
-        </div>
-    </section>
-    
+
     <section>
         <h2>Video sobre Exploración Espacial</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/G3cx9OcM11o?si=qwQ0hJbEAWpA3lFL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/G3cx9OcM11o" title="YouTube video player" allowfullscreen></iframe>
     </section>
+
+    <section>
+        <h2>Planetas del Sistema Solar</h2>
+        <div class="planetas-container">
+            <div class="planeta" style="top: 50px; left: 20px;" data-info="Mercurio: El planeta más cercano al Sol"></div>
+            <div class="planeta" style="top: 200px; left: 80px; width: 70px; height: 70px;" data-info="Venus: Similar en tamaño a la Tierra"></div>
+            <div class="planeta" style="top: 300px; left: 300px; background-color: #e63946;" data-info="Marte: Conocido como el planeta rojo"></div>
+        </div>
+        <div id="tooltip" class="tooltip"></div>
+    </section>
+
+    <section>
+        <h2>Viajes Espaciales y Colonización</h2>
+        <p>Los avances en la exploración espacial nos han acercado a la posibilidad de colonizar otros planetas. Marte es el principal candidato debido a su similitud con la Tierra.</p>
+
+        <h3>¿Cuándo podríamos colonizar Marte?</h3>
+        <p>Según estimaciones, las primeras colonias humanas podrían establecerse en Marte en la década de 2030, dependiendo de los avances tecnológicos y el financiamiento de estas misiones.</p>
+
+        <h3>El Futuro de la Exploración Espacial</h3>
+        <p>Además de Marte, se están estudiando lunas como Europa (de Júpiter) y Titán (de Saturno) como posibles destinos para la vida humana en el futuro.</p>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var planetas = document.querySelectorAll(".planeta");
+            var tooltip = document.getElementById("tooltip");
     
-    <div class="planeta" style="top: 50px; left: 20px;"></div>
-    <div class="planeta" style="top: 200px; left: 80px; width: 70px; height: 70px;"></div>
-    <div class="planeta" style="top: 300px; left: 300px; background-color: #e63946;"></div>
+            for (var i = 0; i < planetas.length; i++) {
+                planetas[i].addEventListener("mouseover", function(event) {
+                    tooltip.innerHTML = "<strong>" + this.getAttribute("data-info") + "</strong>";
+                    tooltip.style.display = "block";
+                    tooltip.style.left = (event.pageX + 10) + "px";
+                    tooltip.style.top = (event.pageY - 20) + "px";
+                });
+    
+                planetas[i].addEventListener("mousemove", function(event) {
+                    tooltip.style.left = (event.pageX + 10) + "px";
+                    tooltip.style.top = (event.pageY - 20) + "px";
+                });
+    
+                planetas[i].addEventListener("mouseleave", function() {
+                    tooltip.style.display = "none";
+                });
+            }
+        });
+    </script>
+<div class="imagenes-container">
+    <div class="imagen-container left">
+        <img src="https://assets.dev-filo.dift.io/img/2023/01/10/fiyio5vvuaavx7f2103_sq.jpeg" 
+        alt="Astronauta en el espacio" class="imagen" data-info="Los astronautas han realizado más de 200 misiones espaciales. <br>El primer humano en el espacio fue Yuri Gagarin en 1961. <br>La NASA planea volver a la Luna en la misión Artemis.">
+        <div class="tooltip"></div>
+    </div>
+    <div class="imagen-container right">
+        <img src="https://media.istockphoto.com/id/1131418344/es/foto/transbordador-espacial-en-los-rayos-del-sol.jpg?s=612x612&w=0&k=20&c=bv8NKQ2-4-IcK5HFUCxef0gAfL8DfDEYDk-3_YvfcBY=" 
+        alt="Transbordador espacial" class="imagen" data-info="Los transbordadores espaciales se usaron entre 1981 y 2011. <br>Permitieron construir la Estación Espacial Internacional. <br>Podían llevar hasta 7 astronautas.">
+        <div class="tooltip"></div>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const imagenes = document.querySelectorAll(".imagen");
+
+        imagenes.forEach(imagen => {
+            const container = imagen.parentElement;
+            const tooltip = container.querySelector(".tooltip");
+            tooltip.innerHTML = imagen.getAttribute("data-info");
+
+            imagen.addEventListener("mouseover", function() {
+                tooltip.style.display = "block";
+            });
+
+            imagen.addEventListener("mouseleave", function() {
+                tooltip.style.display = "none";
+            });
+        });
+    });
+</script>  
 </body>
 </html>
+
