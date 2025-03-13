@@ -141,3 +141,130 @@
 .imagen-webb img:hover {
     transform: scale(1.05);
 }
+.noticias-dashboard-grid {
+    background-color: white;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.titulo-dashboard {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a3b;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #4d6aff;
+    padding-bottom: 10px;
+}
+
+.noticias-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.noticia-grid-card {
+    background-color: #f4f7ff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 0 12px rgba(100, 150, 255, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.noticia-grid-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 18px rgba(100, 150, 255, 0.3);
+}
+
+.noticia-imagen {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.noticia-titulo {
+    font-size: 1.2rem;
+    color: #1c2260;
+    margin-bottom: 10px;
+}
+
+.noticia-texto {
+    font-size: 0.98rem;
+    color: #333;
+    line-height: 1.5;
+}
+.universo-observable-section {
+    background-color: white;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #1a1a3b;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 2px solid #4d6aff;
+    padding-bottom: 10px;
+}
+
+.universo-observable-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.universo-observable-texto {
+    flex: 1 1 60%;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.universo-observable-texto strong {
+    color: #1c2260;
+}
+
+.universo-observable-imagen {
+    flex: 1 1 35%;
+    text-align: center;
+}
+
+.universo-observable-imagen img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(100, 150, 255, 0.25);
+}
+
+.footer-seccion {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 60px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.95rem;
+    color: #222;
+    border-top: 2px solid #ccc;
+}
+
+.footer-seccion a {
+    color: #4d6aff;
+    text-decoration: none;
+}
+
+.footer-seccion a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,87 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: url('https://www.muyinteresante.com/wp-content/uploads/sites/5/2024/01/21/65ad51100fd23.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.principal {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, rgba(0,0,50,1) 0%, rgba(50,50,150,1) 100%);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(173, 216, 230, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.principal:hover {
+    transform: scale(1.05);
+}
+
+header {
+    background-color: #0a0a23;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(100, 150, 255, 0.3);
+}
+
+section {
+    padding: 20px;
+    background-color: rgba(0, 0, 50, 0.8);
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 90%;
+    box-shadow: 0 0 15px rgba(100, 100, 255, 0.3);
+}
+
+.card {
+    background: linear-gradient(145deg, #1b1b3a, #23234b);
+    padding: 15px;
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(100, 150, 255, 0.5);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(173, 216, 230, 0.6);
+}
+
+.info {
+    display: none;
+    background-color: rgba(10, 10, 35, 0.9);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.card:hover + .info {
+    display: block;
+}
+
+.planeta {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #f4a261;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: flotar 6s infinite alternate;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(20px); }
+}
